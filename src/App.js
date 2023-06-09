@@ -1,23 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Home from "./Components/Home";
+import "./App.css";
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const handleMenuClick = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className={isMobile ? "MenuContainer mobile" : "MenuContainer"}>
+        {isMobile && (
+          <div
+            className={menuOpen ? "HamburgerMenu open" : "HamburgerMenu"}
+            onClick={handleMenuClick}
+          >
+            <div className="HamburgerIcon HamburgerIconOpen"></div>
+            <div className="HamburgerIcon HamburgerIconOpen"></div>
+            <div className="HamburgerIcon HamburgerIconOpen"></div>
+          </div>
+        )}
+        {isMobile && (
+          <div className={menuOpen ? "Sidebar open" : "Sidebar"}>
+            <ul>
+              <li>Home</li>
+              <li>Drone</li>
+              <li>Coding</li>
+              <li>About Me</li>
+            </ul>
+          </div>
+        )}
+      </div>
+      {!isMobile && (
+        <ul className="DesktopMenu">
+          <li>Home</li>
+          <li>Drone</li>
+          <li>Coding</li>
+          <li>About Me</li>
+        </ul>
+      )}
+      <Home />
     </div>
   );
 }
