@@ -55,7 +55,9 @@ function App() {
           <li>About Me</li>
         </ul>
       )}
-      <Home />
+      <div className="Home">
+        <Home />
+      </div>
     </div>
   );
 }
