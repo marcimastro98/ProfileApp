@@ -1,0 +1,83 @@
+.pageContainer {
+  height: 100%;
+  width: 100%;
+  padding-top: 5%;
+}
+.presentationContainer {
+  background-color: #181818;
+  margin: 0% 5% 0% 5%;
+  border-radius: 10px;
+  height: 30%;
+}
+.presentationContainer p {
+  margin: 0%;
+  padding: 5% 5% 5% 5%;
+  color: #1eff00;
+}
+#terminalBar {
+  width: 100%;
+  padding: 0px;
+  background-color: #2e2e2e;
+  position: relative;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#terminalBar #terminalClose {
+  height: 15px;
+  width: 15px;
+  background-color: #ff0000;
+  border-radius: 100%;
+  margin: 5px;
+  padding: 0;
+}
+#terminalBar #terminalReduce {
+  height: 15px;
+  width: 15px;
+  background-color: #eeff00;
+  border-radius: 100%;
+  margin: 5px;
+  padding: 0;
+}
+#terminalBar #terminalMinimize {
+  height: 15px;
+  width: 15px;
+  background-color: #1eff00;
+  border-radius: 100%;
+  margin: 5px;
+  padding: 0;
+}
+.infoContainer {
+  position: relative;
+  width: 100%;
+  margin-top: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.infoContainerBackground {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.avatarContainer {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#avatar {
+  width: 150px;
+  height: 150px;
+  background-color: #1d224d;
+  border-radius: 100%;
+  position: absolute;
+  margin-left: 5%;
+  /* top: 33%; */
+  /* transform: rotate(340deg); */
+}
