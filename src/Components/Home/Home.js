@@ -44,8 +44,17 @@ const Home = () => {
           </div>
           <p>{typedText.replace("undefined", "")}</p>
         </div>
-        <div className="avatarContainer">
-          <img src={avatar} alt="avatar" id="avatar" />
+        <div className="profile">
+          <div className="avatarContainer">
+            <img src={avatar} alt="avatar" id="avatar" />
+          </div>
+          <div className="profileInfo">
+            <ul>
+              <li style={{ color: "#aaaa" }}>Computer Engineer</li>
+              <li>Full Stack Developer</li>
+              <li>Drone Pilot</li>
+            </ul>
+          </div>
         </div>
       </div>
     </>
