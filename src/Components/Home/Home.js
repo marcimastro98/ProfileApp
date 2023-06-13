@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import "./Home.css";
 import avatar from "../../image/AvatarMaker.png";
+import Drone from "../Drone/Drone";
+import Coding from "../Coding/Coding";
+import About from "../About/About";
 
 const Home = () => {
   const [typedText, setTypedText] = useState("");
@@ -50,11 +53,22 @@ const Home = () => {
           </div>
           <div className="profileInfo">
             <ul>
-              <li style={{ color: "#aaaa" }}>Computer Engineer</li>
-              <li>Full Stack Developer</li>
-              <li>Drone Pilot</li>
+              <div>
+                <li>Computer Engineer&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Full Stack Developer&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Drone Pilot&nbsp;&nbsp;&nbsp;&nbsp;</li>
+              </div>
             </ul>
           </div>
+        </div>
+        <div className="droneContainer">
+          <Drone></Drone>
+        </div>
+        <div className="codingContainer">
+          <Coding></Coding>
+        </div>
+        <div className="aboutContainer">
+          <About></About>
         </div>
       </div>
     </>

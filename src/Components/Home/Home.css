@@ -1,22 +1,27 @@
 .pageContainer {
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  padding-top: 5%;
+  padding-top: 5vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
+
 .presentationContainer {
   background-color: #181818;
-  margin: 0% 5% 0% 5%;
   border-radius: 10px;
-  height: 30%;
+  width: 80vw;
 }
+
 .presentationContainer p {
-  margin: 0%;
-  padding: 5% 5% 5% 5%;
+  margin: 0;
+  padding: 5%;
   color: #1eff00;
 }
+
 #terminalBar {
   width: 100%;
-  padding: 0px;
+  padding: 0;
   background-color: #2e2e2e;
   position: relative;
   border-top-left-radius: 10px;
@@ -25,70 +30,116 @@
   justify-content: flex-end;
   align-items: center;
 }
-#terminalBar #terminalClose {
-  height: 15px;
-  width: 15px;
-  background-color: #ff0000;
-  border-radius: 100%;
-  margin: 5px;
-  padding: 0;
-}
-#terminalBar #terminalReduce {
-  height: 15px;
-  width: 15px;
-  background-color: #eeff00;
-  border-radius: 100%;
-  margin: 5px;
-  padding: 0;
-}
+
+#terminalBar #terminalClose,
+#terminalBar #terminalReduce,
 #terminalBar #terminalMinimize {
   height: 15px;
   width: 15px;
-  background-color: #1eff00;
   border-radius: 100%;
   margin: 5px;
   padding: 0;
 }
+
+#terminalBar #terminalClose {
+  background-color: #ff0000;
+}
+
+#terminalBar #terminalReduce {
+  background-color: #eeff00;
+}
+
+#terminalBar #terminalMinimize {
+  background-color: #1eff00;
+}
+
 .infoContainer {
   position: relative;
   width: 100%;
-  margin-top: 15%;
+  margin-top: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .infoContainerBackground {
-  width: 40%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
 .profile {
   width: 100%;
-  height: 20%;
+  height: auto;
+  padding-top: 5%;
 }
+
+.avatarContainer {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+#avatar {
+  width: 100px;
+  height: 100px;
+  background-color: #1d224d;
+  border-radius: 100%;
+  position: relative;
+  bottom: 0;
+}
+
 .profileInfo {
   width: 100%;
-  height: 30%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
+
+.profileInfo ul {
+  background-color: #181818;
+  border-radius: 10px;
+  padding: 10px;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .profileInfo ul {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .profileInfo ul {
+    width: 70%;
+  }
+}
+
 .profileInfo ul li {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: #1eff00;
+  font-weight: bold;
 }
-.avatarContainer {
-  width: 100%;
-  height: 70%;
+
+.profileInfo ul div {
   display: flex;
-  justify-content: center;
   align-items: center;
+  animation: marqueeAnimation 6s alternate-reverse infinite;
 }
-#avatar {
-  width: 150px;
-  height: 150px;
-  background-color: #1d224d;
-  border-radius: 100%;
-  position: absolute;
-  margin-left: 5%;
+
+@keyframes marqueeAnimation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
