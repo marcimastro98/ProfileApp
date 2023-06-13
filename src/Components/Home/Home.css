@@ -1,0 +1,145 @@
+.pageContainer {
+  height: 100vh;
+  width: 100%;
+  padding-top: 5vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.presentationContainer {
+  background-color: #181818;
+  border-radius: 10px;
+  width: 80vw;
+}
+
+.presentationContainer p {
+  margin: 0;
+  padding: 5%;
+  color: #1eff00;
+}
+
+#terminalBar {
+  width: 100%;
+  padding: 0;
+  background-color: #2e2e2e;
+  position: relative;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#terminalBar #terminalClose,
+#terminalBar #terminalReduce,
+#terminalBar #terminalMinimize {
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  margin: 5px;
+  padding: 0;
+}
+
+#terminalBar #terminalClose {
+  background-color: #ff0000;
+}
+
+#terminalBar #terminalReduce {
+  background-color: #eeff00;
+}
+
+#terminalBar #terminalMinimize {
+  background-color: #1eff00;
+}
+
+.infoContainer {
+  position: relative;
+  width: 100%;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoContainerBackground {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile {
+  width: 100%;
+  height: auto;
+  padding-top: 5%;
+}
+
+.avatarContainer {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+#avatar {
+  width: 100px;
+  height: 100px;
+  background-color: #1d224d;
+  border-radius: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+.profileInfo {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profileInfo ul {
+  background-color: #181818;
+  border-radius: 10px;
+  padding: 10px;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .profileInfo ul {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .profileInfo ul {
+    width: 70%;
+  }
+}
+
+.profileInfo ul li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #1eff00;
+  font-weight: bold;
+}
+
+.profileInfo ul div {
+  display: flex;
+  align-items: center;
+  animation: marqueeAnimation 6s alternate-reverse infinite;
+}
+
+@keyframes marqueeAnimation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

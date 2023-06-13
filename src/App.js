@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Home from "./Components/Home";
+import Home from "./Components/Home/Home";
 import "./App.css";
 
 function App() {
@@ -55,7 +55,9 @@ function App() {
           <li>About Me</li>
         </ul>
       )}
-      <Home />
+      <div className="Home">
+        <Home />
+      </div>
     </div>
   );
 }
