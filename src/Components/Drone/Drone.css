@@ -4,8 +4,11 @@
   align-items: center;
   justify-content: space-around;
   min-height: 30vh;
-  background-color: #969696;
+  background-color: #222222;
   padding: 0 30px;
+}
+.droneSection h1 {
+  color: #ffffff;
 }
 .droneSection p {
   flex: 1;
@@ -13,6 +16,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: #ffffff;
 }
 .droneSection a {
   flex: 1;
@@ -25,7 +29,7 @@
 }
 .droneSection a {
   text-decoration: none;
-  color: #000000;
+  color: #ffffff;
 }
 .droneSection a img {
   height: 50px;

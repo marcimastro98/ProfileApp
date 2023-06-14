@@ -96,7 +96,7 @@ const Home = forwardRef((props, ref) => {
         <div className="codingContainer" ref={refs.codingRef}>
           <Coding></Coding>
         </div>
-        <div className="aboutContainer" ref={refs.aboutRef}>
+        <div className="contactContainer" ref={refs.aboutRef}>
           <Contact></Contact>
         </div>
       </div>
