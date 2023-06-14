@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/ProfileApp/static/css/main.ae70782e.css",
+    "main.js": "/ProfileApp/static/js/main.a4705448.js",
+    "static/js/787.a2a9efb4.chunk.js": "/ProfileApp/static/js/787.a2a9efb4.chunk.js",
+    "static/media/react.png": "/ProfileApp/static/media/react.becbab0ab5d2271d2831.png",
+    "static/media/mongo.png": "/ProfileApp/static/media/mongo.6170bacefd8a1f69ca74.png",
+    "static/media/vsc.png": "/ProfileApp/static/media/vsc.9bc6e588b5f2b867a8a4.png",
+    "static/media/docker.png": "/ProfileApp/static/media/docker.836135682b8efd76f4ac.png",
+    "static/media/angular.png": "/ProfileApp/static/media/angular.2a94d7a4ed5d0938f132.png",
+    "static/media/java-logo-1.png": "/ProfileApp/static/media/java-logo-1.fdabd4e11f1235e4e8e0.png",
+    "static/media/python.png": "/ProfileApp/static/media/python.6a5cbc319ab3ddf8ef92.png",
+    "static/media/openshift.png": "/ProfileApp/static/media/openshift.9193f9b46e251f4bc0cd.png",
+    "static/media/jetbrains.png": "/ProfileApp/static/media/jetbrains.8e4c5791348baf27474f.png",
+    "static/media/quarkus-logo.png": "/ProfileApp/static/media/quarkus-logo.830cb07ad879ac15cefa.png",
+    "static/media/spring.png": "/ProfileApp/static/media/spring.5d3a34e81adb6a9148fb.png",
+    "static/media/AvatarMaker.png": "/ProfileApp/static/media/AvatarMaker.9c501cc0d22ce249a20b.png",
+    "static/media/youtube.png": "/ProfileApp/static/media/youtube.641072cf09a4a8753f67.png",
+    "static/media/html-5.png": "/ProfileApp/static/media/html-5.cfb2ba4a6b1c3de295bc.png",
+    "static/media/css-3.png": "/ProfileApp/static/media/css-3.4a6549b8c2b4cda8bb88.png",
+    "static/media/js.png": "/ProfileApp/static/media/js.3dfb665e058d08c99f28.png",
+    "index.html": "/ProfileApp/index.html",
+    "main.ae70782e.css.map": "/ProfileApp/static/css/main.ae70782e.css.map",
+    "main.a4705448.js.map": "/ProfileApp/static/js/main.a4705448.js.map",
+    "787.a2a9efb4.chunk.js.map": "/ProfileApp/static/js/787.a2a9efb4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ae70782e.css",
+    "static/js/main.a4705448.js"
+  ]
+}
