@@ -1,11 +1,17 @@
-import { useState, useEffect } from "react";
+import {
+  useState,
+  useEffect,
+  useRef,
+  forwardRef,
+  useImperativeHandle,
+} from "react";
 import "./Home.css";
 import avatar from "../../image/AvatarMaker.png";
 import Drone from "../Drone/Drone";
 import Coding from "../Coding/Coding";
-import About from "../About/About";
+import Contact from "../Contact/Contact";
 
-const Home = () => {
+const Home = forwardRef((props, ref) => {
   const [typedText, setTypedText] = useState("");
   const text = `H.ello, my name is Marcello, and I'm a computer engineer. I served in
     the Italian Army as a soldier before deciding to pursue my studies in
@@ -19,6 +25,29 @@ const Home = () => {
     the world from a unique perspective. I decided to create this personal
     portfolio in my free time, to summarize my personal skills and
     hobbies.`;
+  const refs = {
+    droneRef: useRef(null),
+    codingRef: useRef(null),
+    aboutRef: useRef(null),
+  };
+
+  useImperativeHandle(ref, () => ({
+    scrollToSection(section) {
+      switch (section) {
+        case "drone":
+          refs.droneRef.current.scrollIntoView({ behavior: "smooth" });
+          break;
+        case "coding":
+          refs.codingRef.current.scrollIntoView({ behavior: "smooth" });
+          break;
+        case "contact":
+          refs.aboutRef.current.scrollIntoView({ behavior: "smooth" });
+          break;
+        default:
+          break;
+      }
+    },
+  }));
 
   useEffect(() => {
     let currentIndex = 0;
@@ -61,18 +90,18 @@ const Home = () => {
             </ul>
           </div>
         </div>
-        <div className="droneContainer">
+        <div className="droneContainer" ref={refs.droneRef}>
           <Drone></Drone>
         </div>
-        <div className="codingContainer">
+        <div className="codingContainer" ref={refs.codingRef}>
           <Coding></Coding>
         </div>
-        <div className="aboutContainer">
-          <About></About>
+        <div className="contactContainer" ref={refs.aboutRef}>
+          <Contact></Contact>
         </div>
       </div>
     </>
   );
-};
+});
 
 export default Home;
