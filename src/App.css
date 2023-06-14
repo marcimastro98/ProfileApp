@@ -9,45 +9,43 @@
   align-items: center;
 }
 
+.DesktopMenu {
+  height: 5%;
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  z-index: 4;
+}
 ul {
   list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.DesktopMenu {
-  height: 5%;
-  margin: 0%;
+.DesktopMenu ul {
+  width: 100%;
+  margin: 0;
+  position: fixed;
+  z-index: 4;
   padding: 0%;
 }
 .DesktopMenu li {
   display: inline;
-  border-left: 1px solid #000000;
+  border-left: 1px solid #ffffff;
   width: 100%;
   position: relative;
   cursor: pointer;
   text-align: center;
+  color: #ffffff;
+  background-color: #2e2e2e;
+}
+.DesktopMenu li:hover {
+  background-color: #ffffff;
+  color: #2e2e2e;
 }
 
 li:first-child {
   border-left: none;
-}
-
-li::before {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: #000000;
-  transition: width 0.3s ease, left 0.3s ease;
-}
-
-li:hover::before {
-  width: 40%;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .HamburgerMenu {
@@ -73,6 +71,8 @@ li:hover::before {
 .HamburgerMenu.open {
   z-index: 2;
   transform: rotate(270deg);
+  position: fixed;
+  top: 30px;
 }
 .HamburgerMenu.open .HamburgerIcon:nth-child(1) {
   transform: rotate(60deg);

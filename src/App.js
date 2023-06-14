@@ -1,10 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Home from "./Components/Home/Home";
 import "./App.css";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const childRef = useRef();
+  const MenuItems = () => (
+    <ul>
+      <li onClick={() => childRef.current.scrollToSection("drone")}>
+        <p>Drone</p>
+      </li>
+      <li onClick={() => childRef.current.scrollToSection("coding")}>
+        <p>Coding</p>
+      </li>
+      <li onClick={() => childRef.current.scrollToSection("contact")}>
+        <p>Contact</p>
+      </li>
+    </ul>
+  );
 
   useEffect(() => {
     const handleResize = () => {
@@ -36,27 +50,17 @@ function App() {
             <div className="HamburgerIcon HamburgerIconOpen"></div>
           </div>
         )}
-        {isMobile && (
-          <div className={menuOpen ? "Sidebar open" : "Sidebar"}>
-            <ul>
-              <li>Home</li>
-              <li>Drone</li>
-              <li>Coding</li>
-              <li>About Me</li>
-            </ul>
-          </div>
-        )}
+        <div className={isMobile && menuOpen ? "Sidebar open" : "Sidebar"}>
+          <MenuItems />
+        </div>
       </div>
       {!isMobile && (
-        <ul className="DesktopMenu">
-          <li>Home</li>
-          <li>Drone</li>
-          <li>Coding</li>
-          <li>About Me</li>
-        </ul>
+        <div className="DesktopMenu">
+          <MenuItems />
+        </div>
       )}
       <div className="Home">
-        <Home />
+        <Home ref={childRef} />
       </div>
     </div>
   );

@@ -132,14 +132,23 @@
 .profileInfo ul div {
   display: flex;
   align-items: center;
-  animation: marqueeAnimation 6s alternate-reverse infinite;
+  animation: marqueeAnimation 7s linear infinite;
 }
 
 @keyframes marqueeAnimation {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(110%);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(-110%);
   }
+}
+.droneContainer {
+  width: 100%;
+}
+.codingContainer {
+  width: 100%;
+}
+.aboutContainer {
+  width: 100%;
 }
