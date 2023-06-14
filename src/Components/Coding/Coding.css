@@ -100,8 +100,19 @@
 }
 
 @media screen and (max-width: 768px) {
-  #codingTitle h1 {
-    width: 100% !important;
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    15% {
+      width: 100%;
+    }
+    16% {
+      width: 100%;
+    }
+    100% {
+      width: 100%;
+    }
   }
   .codingSection {
     height: 100vh;
